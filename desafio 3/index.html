@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 3</title>
+</head>
+<body>
+    <script>
+        let nombreProducto = "bisuteria"
+        let precioUnitario = "30"
+        let cantidadDeseada = prompt("que cantidad desea comprar?")
+
+        let Precio = precioUnitario * cantidadDeseada
+
+        if (cantidadDeseada >= 5) {
+            let PrecioyDescuento = Precio * 10
+            let Descuento = PrecioyDescuento / 100
+            console.log("a pagar"+ Descuento)
+            alert("por su compra de "+ cantidadDeseada + " " + nombreProducto + "debe abonar:" + Descuento)
+        } else {
+            console.log("a pagar"+ Precio)
+            alert("por su compra de"+ cantidadDeseada + " " + nombreProducto + "debe abonar:" + Precio)
+        }
+    </script>
+    
+</body>
+</html>
