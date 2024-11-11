@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 10</title>
+</head>
+<body>
+    <h1>Empanadas</h1> 
+
+    
+    <p>con la compra de más de 5 empanadas, obtienes un descuento del 20%</p>
+
+
+    <h2>Nuestros Sabores</h2>
+
+    <script>
+       const h1 = document.querySelector("h1");
+       h1.style.color = "red";
+
+       const h2 = document.querySelector("h2");
+       h2.style.color = "orange";
+
+       const fondo = document.querySelector("body");
+       fondo.style.color = "purple";
+       
+       const empanadas = ["Carne","JyQ","Verduras","Chorizo"];
+
+       empanadas.push("CheeseBacon");
+
+        console.log(empanadas);
+
+        for(let i = 0; i < empanadas.length ; i++){
+            console.log( `Producto ${i + 1} : ${empanadas[i]}` )
+        }
+
+        let carn = document.createElement("h3");
+        carn.innerHTML = empanadas[0];
+        document.body.appendChild(carn);
+
+        let jam = document.createElement("h3");
+        jam.innerHTML = empanadas[1];
+        document.body.appendChild(jam);
+
+        let ver = document.createElement("h3");
+        ver.innerHTML = empanadas[2];
+        document.body.appendChild(ver);
+
+        let cho = document.createElement("h3");
+        cho.innerHTML = empanadas[3];
+        document.body.appendChild(cho);
+
+
+
+        let nombreProducto = "Empanada/s"
+        let precioUnitario = "30"
+        let cantidadDeseada = prompt("que cantidad desea comprar?")
+
+        let Precio = precioUnitario * cantidadDeseada
+
+        if (cantidadDeseada >= 5) {
+            let PrecioyDescuento = Precio * 20
+            let Descuento = PrecioyDescuento / 100
+            console.log("a pagar"+ Descuento)
+            alert("por su compra de "+ cantidadDeseada + " " + nombreProducto + " " + "debe abonar:" + Descuento)
+        } else {
+            console.log("a pagar"+ Precio)
+            alert("por su compra de"+ cantidadDeseada + " " + nombreProducto + "debe abonar:" + Precio)
+        }
+
+        let boton = document.getElementById("btnCarrito");
+        boton.id = "btn"
+        boton.innerHTML = "Agregar al carrito" 
+        boton.addEventListener("click", function() {
+             const h3 = document.createElement("h3")
+              h3.innerHTML = "agregado";
+               document.body.appendChild(h3)
+        })
+
+    </script>
+
+    <p>Feliz final de curso profes</p>
+    <p>esta buena la pagina no?</p>
+    <button id="btn">si</button>
+    <p>no me funciona el boton sjjsjs</p>
+</body>
+</html>

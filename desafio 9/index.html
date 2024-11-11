@@ -6,17 +6,14 @@
     <title>desafio 9</title>
 </head>
 <body>
-    
+    <button id="btn">hola</button>
     <script>
-        let boton = document.getElementById("btnCarrito");
-
-        boton.id = "btn"
-
-         boton.innerHTML = "Agregar al carrito" 
+        let boton = document.getElementById("btn");
+        boton.innerText = "Agregar al carrito" 
 
          boton.addEventListener("click", function() {
             const h3 = document.createElement("h3")
-            h3-innerHTML = "agregado";
+            h3.innerText = "agregado";
             document.body.appendChild(h3)
 
          })
